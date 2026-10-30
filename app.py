@@ -20,7 +20,7 @@ if st.button("Iniciar Auditoria", type="primary"):
         st.error("Insere a tua API Key para continuar.")
     else:
         genai.configure(api_key=api_key)
-        modelo = genai.GenerativeModel('gemini-1.5-flash-latest')
+        modelo = genai.GenerativeModel('gemini-pro')
         termos_excluidos = [t.strip().lower() for t in ignorar.split(',') if t.strip()]
         
         paginas_visitadas = set()
